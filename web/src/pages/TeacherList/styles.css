@@ -11,6 +11,26 @@
 	color: var(--color-text-primary);
 }
 
+#search-teachers button {
+	align-items: center;
+	background-color: var(--color-secondary);
+	border: 0;
+	border-radius: 0.8rem;
+	color: var(--color-button-text);
+	cursor: pointer;
+	font: 700 1.6rem Archivo;
+	height: 5.6rem;
+	justify-content: center;
+	margin-top: 3.2rem;
+	text-decoration: none;
+	transition: background-color 0.2s;
+	width: 100%;
+}
+
+#search-teachers button:hover {
+	background-color: var(--color-secondary-dark);
+}
+
 #page-teacher-list main {
 	margin: 3.2rem auto;
 	width: 90%;
@@ -25,7 +45,7 @@
 		bottom: -28px;
 		column-gap: 16px;
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		position: absolute;
 	}
 

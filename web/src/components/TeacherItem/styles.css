@@ -61,22 +61,22 @@
 	font-size: 1.6rem;
 }
 
-.teacher-item footer button {
+.teacher-item footer a {
 	align-items: center;
 	background-color: var(--color-secondary);
 	border: 0;
 	border-radius: 0.8rem;
 	color: var(--color-button-text);
-	cursor: pointer;
 	display: flex;
 	font: 700 1.4rem Archivo;
 	height: 5.6rem;
 	justify-content: space-evenly;
+	text-decoration: none;
 	transition: 0.2s;
 	width: 20rem;
 }
 
-.teacher-item footer button:hover {
+.teacher-item footer a:hover {
 	background-color: var(--color-secondary-dark);
 }
 
