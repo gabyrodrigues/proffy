@@ -7,33 +7,44 @@ import heartOutlineIcon from '../../assets/images/icons/heart-outline.png';
 import unfavoriteIcon from '../../assets/images/icons/unfavorite.png';
 import whatsappIcon from '../../assets/images/icons/whatsapp.png';
 
-function TeacherItem() {
+export interface Teacher {
+	id: number;
+	avatar: string;
+	bio: string;
+	cost: number;
+	name: string;
+	subject: string;
+	whatsapp: string;
+}
+
+interface TeacherItemProps {
+	teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.profile}>
 				<Image 
 					style={styles.avatar}
-					source={{ uri: 'https://lh3.googleusercontent.com/ogw/ADGmqu_trojPS_HvpBXJzeUJSwyY6SWBsmjOG4EA6Ge8=s83-c-mo' }}
+					source={{ uri: teacher.avatar }}
 				/>
 
 				<View style={styles.profileInfo}>
-					<Text style={styles.name}>Gabriely Lima</Text>
-					<Text style={styles.subject}>Química</Text>
+					<Text style={styles.name}>{teacher.name}</Text>
+					<Text style={styles.subject}>{teacher.subject}</Text>
 				</View>
 			</View>
 
 			<Text style={styles.bio}>
-				Entusiasta das melhores tecnologias de química avançada.
-				{'\n'}{'\n'}
-				Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. 
-				Mais de 200.000 pessoas já passaram por uma das minhas explosões.
+				{teacher.bio}
 			</Text>
 
 			<View style={styles.footer}>
 				<Text style={styles.price}>
-						Preço Hora {'   '}
+						Preço/hora {'   '}
 						<Text style={styles.priceValue}>
-							R$ 20,00
+							{teacher.cost}
 						</Text>
 				</Text>
 
