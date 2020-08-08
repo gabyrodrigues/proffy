@@ -12,6 +12,12 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between'
 	},
 
+	header: {
+		alignItems: 'center',
+		flexDirection: 'row',
+		justifyContent: 'space-between'
+	},
+
 	title: {
 		color: '#fff',
 		fontFamily: 'Archivo_700Bold',
